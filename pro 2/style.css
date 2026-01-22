@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+}
+
+.header {
+  padding: 15px;
+  background: #020617;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+.app {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.preview {
+  flex: 1;
+  background: #020617;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.image-box {
+  height: 320px;
+  border: 2px dashed #38bdf8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.controls {
+  flex: 1;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.controls h2 {
+  margin: 15px 0 10px;
+  color: #38bdf8;
+}
+
+.control {
+  margin-bottom: 12px;
+}
+
+label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="range"], select {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #334155;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #38bdf8;
+  color: #000;
+}
+
+canvas {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+}

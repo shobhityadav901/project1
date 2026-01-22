@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Photo Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>📸 Smart Photo Editor</h1>
+</header>
+
+<main class="app">
+
+  <!-- LEFT : PREVIEW -->
+  <section class="preview">
+    <div class="image-box">
+      <img id="image" alt="Preview">
+    </div>
+    <input type="file" accept="image/*" id="upload">
+  </section>
+
+  <!-- RIGHT : CONTROLS -->
+  <section class="controls">
+
+    <h2>Adjustments</h2>
+
+    <div class="control">
+      <label>Brightness</label>
+      <input type="range" id="brightness" min="80" max="140" value="100">
+    </div>
+
+    <div class="control">
+      <label>Contrast</label>
+      <input type="range" id="contrast" min="80" max="140" value="100">
+    </div>
+
+    <div class="control">
+      <label>Saturation</label>
+      <input type="range" id="saturate" min="80" max="140" value="100">
+    </div>
+
+    <h2>Enhancements</h2>
+
+    <div class="control">
+      <label>Face Smooth</label>
+      <input type="range" id="smooth" min="0" max="6" value="0">
+    </div>
+
+    <div class="control">
+      <label>Background Blur</label>
+      <input type="range" id="bgblur" min="0" max="10" value="0">
+    </div>
+
+    <h2>Modes</h2>
+
+    <select id="passportMode">
+      <option value="none">Normal Mode</option>
+      <option value="passport">Passport Mode</option>
+    </select>
+
+    <div class="buttons">
+      <button class="primary" id="aiBtn">AI Enhance</button>
+      <button id="resetBtn">Reset</button>
+      <button id="downloadBtn">Download</button>
+    </div>
+
+  </section>
+
+</main>
+
+<canvas id="canvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
